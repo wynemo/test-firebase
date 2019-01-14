@@ -19,3 +19,9 @@ messaging.setBackgroundMessageHandler(function(payload) {
   return self.registration.showNotification(notificationTitle,
     notificationOptions);
 });
+
+messaging.onMessage(function(payload) {
+
+     console.log(payload.data.badgeCount);
+
+});
